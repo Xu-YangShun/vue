@@ -7,15 +7,19 @@
   <script src="../../lib/vue.js"></script>
 </head>
 <body>
-  <div id="app"></div>
-  <div id="box">
-    <h1>{{msg}}</h1>
+  <div id="app">
+    <div v-show="isShow">
+      <h1>box1</h1>
+    </div>
+    <div v-show="!isShow">
+      <h1>box2</h1>
+    </div>
   </div>
   <script>
     let app = new Vue({
-      el:'#box',
+      el:'#app',
       data:{
-        msg:'Hello World!'
+        isShow:true
       }
     })
   </script>
