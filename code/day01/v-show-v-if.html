@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="../../lib/vue.js"></script>
+  <style>
+    #app>div{
+      width: 200px;
+      height: 200px;
+      /* background-color: pink; */
+      text-align: center;
+      line-height: 200px;
+    }
+    #app div:first-of-type{
+      background-color: yellowgreen;
+    }
+    #app div:last-of-type{
+      background-color: pink;
+    }
+  </style>
 </head>
 <body>
   <div id="app">
@@ -14,12 +29,18 @@
     <div v-show="!isShow">
       <h1>box2</h1>
     </div>
+    <button @click="qh">切换</button>
   </div>
   <script>
     let app = new Vue({
       el:'#app',
       data:{
         isShow:true
+      },
+      methods:{
+        qh(){
+          this.isShow = !this.isShow;
+        }
       }
     })
   </script>
