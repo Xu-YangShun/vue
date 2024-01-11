@@ -2,28 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  
   <style>
-    #app>div{
+    .box {
       width: 200px;
       height: 200px;
-      text-align: center;
-      line-height: 200px;
-    }
-    #app div:first-child{
-      background-color: pink;
-    }
-    #app div:last-child{
-      background-color: yellowgreen;
+      background-color: rgb(187, 150, 156);
     }
   </style>
 </head>
 <body>
   <div id="app">
-    <div>1</div>
-    <div>2</div>
+    <div class="box"></div>
   </div>
+  <script src="./vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+
+      }
+    })
+  </script>
 </body>
 </html>
